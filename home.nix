@@ -51,6 +51,9 @@
     wget
     xdg-desktop-portal-gtk
     libsecret
+    gawk
+    nettools
+    coreutils
   ];
 
   nixpkgs = {

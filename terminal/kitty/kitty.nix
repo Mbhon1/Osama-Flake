@@ -56,20 +56,15 @@
   xdg.configFile."kitty/themes/gruvbox.conf".text = import ./gruvbox.nix; 
   xdg.dataFile."kitty/themes" = {
     source = ./themes;
-    recursive = false;
+    recursive = true;
   };
   xdg.configFile."kitty/kitty.conf".text = ''
     include ./kitty.conf
     env THEME=gruvbox
-    env TMUX_STATUSLINE=cleanline
-    env NVIM_STATUSLINE=rocket-line
-    include ./themes/grubox.conf
     '';
-#xdg.dataFile."fonts/FantasqueSansMono.tff".source = ./FantasqueSansMono.tff;
-#xdg.dataFile."fonts/FantasqueSansMono" = {
-#  source = ./FantasqueSansMono;
-#  recursive = true;
-#};
-
-
+  # xdg.dataFile."fonts/FantasqueSansMono.tff".source = ./FantasqueSansMono.tff;
+  # xdg.dataFile."fonts/FantasqueSansMono" = {
+  #   source = ./FantasqueSansMono;
+  #   recursive = true;
+  # };
 }

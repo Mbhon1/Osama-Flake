@@ -1,33 +1,10 @@
-# Home Manager Configuration
+# Acknowledgements
 
-This home-manager configuration was generated from the spicetify-nix template.
-You will find settings for the system (for if youre not running x86_64
-architecture) and username inside of `flake.nix`. Edit `spicetify.nix` in
-order to customize what theme, extensions, custom apps, and color scheme you
-are using.
+Big s/o tho these guys dots, they really helped me setup my own little nixOS environment. I drew a lot of inspiration and borrowed most of their setups, thank you guys!
 
-Check the [spicetify-nix README](https://github.com/the-argus/spicetify-nix/blob/master/README.md)
-for documentation on ways you can configure spicetify.
-
-## Further configuration
-
-If you are on NixOS linux, you can remove the line
-``targets.genericLinux.enable = true;`` from ``home.nix``.
-Additionally, change ``homeConfigUserString`` in ``flake.nix`` to be equal to
-``username``.
-
-If you want to add this configuration to a git repository, create one
-(for example, on github) and then link it up to this folder by running:
-
-```bash
-git remote add origin https://github.com/your-username/repo-name
-git push -u origin main
-```
-
-(``git remote rm origin`` is also useful if you accidentally add the wrong url)
-
-## Known issues
-
-If you're on Fedora linux, SELinux is enabled by default, and it breaks nix.
-Edit ``/etc/selinux/config`` and change ``SELINUX=enforcing`` to
-``SELINUX=disabled`` and then restart your machine to disable it.
+- [Redyf](https://github.com/Redyf/nixdots)
+- [Misterio77](github:misterio77/nix-starter-config#minimal) 
+- [Syndrizzle](https://github.com/syndrizzle/hotfiles) 
+- [Aylur](https://github.com/aylur/dotfiles) 
+- [TheLinuxPirate](https://github.com/thelinuxpirate/dotfiles.git)
+- [LinuxMobile](https://github.com/linuxmobile/kaku.git)
