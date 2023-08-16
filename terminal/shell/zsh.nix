@@ -10,21 +10,6 @@
     tmux-mem-cpu-load
   ];
 
-  # home.file = {
-  #   ".local/share/zsh/zsh-autosuggestions".source = 
-  #     "${pkgs.zsh-autosuggestions}/share/zsh/zsh-autosuggestions";
-  #   ".local/share/zsh/zsh-history-substring-search".source = 
-  #     "${pkgs.zsh-history-substring-search}/share/zsh/zsh-history-substring-search";
-  #   ".local/share/zsh/zsh-syntax-highlighting".source = 
-  #     "${pkgs.zsh-syntax-highlighting}/share/zsh/zsh-syntax-highlighting";
-  #   ".local/share/zsh/zsh-you-should-use".source =
-  #     "${pkgs.zsh-you-should-use}/share/zsh";
-  #   ".local/share/zsh/nix-zsh-completions".source = 
-  #     "${pkgs.nix-zsh-completions}/share/zsh/plugings/nix";
-  #   ".local/share/zsh/zsh-history".source = 
-  #     "${pkgs.zsh-history}/share/zsh/plugins";
-  # };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -82,6 +67,16 @@
           sha256 = "0lfl4r44ci0wflfzlzzxncrb3frnwzghll8p365ypfl0n04bkxvl";
         };
       }
+      {
+        name = "zsh-you-should-use";
+        file = "zsh-you-should-use.plugin.zsh";
+        src = fetchFromGitHub {
+          owner = "MichaelAquilina";
+          repo = "zsh-you-should-use";
+          sha256 = "1dz48rd66priqhxx7byndqhbmlwxi1nfw8ik25k0z5k7k754brgy";
+          rev = "1f9cb008076d4f2011d5f814dfbcfbece94a99e0";
+        };
+      } 
     ];
     cdpath = ["." "/home/mbhon1" "/home/mbhon1/Pictures"];
     dotDir = ".config/zsh";

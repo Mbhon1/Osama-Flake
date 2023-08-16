@@ -10,6 +10,9 @@
     rust-analyzer
     xclip
     cliphist
+    alejandra
+    statix
+    nil
   ];
 
   programs.neovim = {

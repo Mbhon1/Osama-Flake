@@ -1,4 +1,7 @@
 { pkgs, lib, ...}:
+let 
+  count = "0";
+in
 {
   home.packages = with pkgs; [
     starship
@@ -42,16 +45,16 @@
         format = "[]($style)[$all_status$ahead_behind](bg:#689d6a fg:#312C2E)[ ]($style)";
         style = "bg:none fg:#689d6a";
         conflicted = "=";
-        ahead =	"⇡{count}";
-        behind = "⇣";
-        diverged = "⇕⇡ ⇣";
+        ahead =	"⇡${count}";
+        behind = "⇣${count}";
+        diverged = "⇕⇡ ${count}⇣";
         up_to_date = "";
-        untracked = "?";
+        untracked = "?${count}";
         stashed = "";
-        modified = "!";
-        staged = "+{count}";
+        modified = "!${count}";
+        staged = "+${count}";
         renamed = "»";
-        deleted = "{count}";
+        deleted = "${count}";
       };
       cmd_duration = {
         min_time = 1;

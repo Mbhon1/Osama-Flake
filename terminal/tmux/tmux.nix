@@ -4,7 +4,7 @@
     tmux
   ];
 
-  # xdg.configFile."~/.tmux.conf".text =''
+  # xdg.configFile."/home/mbhon1/.tmux.conf".text =''
 
   #   '';
 }

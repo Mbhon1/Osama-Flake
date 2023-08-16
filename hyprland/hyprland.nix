@@ -17,7 +17,8 @@
     ffmpeg
     spicetify-cli
     wl-gammactl 
-    wl-clipboard 
+    wl-clipboard
+    wlogout
     wf-recorder
     hyprpicker 
     wayshot 
@@ -48,6 +49,7 @@
     xdg-utils
     xdg-user-dirs
     qt6.qtwayland
+
   ];
 
   services.udiskie.enable = true;
@@ -114,7 +116,7 @@
     };
   };
 
-  home.file.".config/hypr/hyprland.conf.bak".text = '''';
+  /* home.file.".config/hypr/hyprland.conf.bak".text = ''''; */
 
   home.file.".config/hypr/start.sh" = {
       executable = true;
