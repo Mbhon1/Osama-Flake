@@ -6,7 +6,7 @@
     userName = "Mbhon1";
     userEmail = "mbhoni@proton.me";
     signing = {
-      key = "F03540E63DA3CB9B48BE3B71572B89161DD1FB0B";
+      key = "6AF68D718519DE4368699CED187283E68CD23390";
       signByDefault = true;
     };
 
@@ -38,7 +38,7 @@
       pull = { ff = "only"; };
       commit = { 
         verbose = true;
-        gpgsign = true;
+        gpgsign = false;
       };
     };
   };

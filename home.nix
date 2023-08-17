@@ -8,7 +8,7 @@
   ./apps.nix
   ./spicetify.nix
   ./terminal
-  # ./utils
+  # TODO: ./utils
   ];
   
 

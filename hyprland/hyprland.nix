@@ -127,4 +127,9 @@
         swww img ~/Pictures/swww-walls/W14_Car_Studio_2.jpg &
         '';
   };
+
+  home.file.".config/swww/changeWalls" = {
+    executable = true;
+    source = ./swww/changeWalls;
+  };
 }

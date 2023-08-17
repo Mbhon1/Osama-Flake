@@ -1,6 +1,6 @@
 { pkgs, lib, ...}:
 let 
-  count = "0";
+  count = "";
 in
 {
   home.packages = with pkgs; [

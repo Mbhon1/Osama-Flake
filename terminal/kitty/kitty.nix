@@ -10,9 +10,9 @@
       dynamic_background_opacity = "yes";
       background_opacity = "0.7";
       cursor_shame = "beam";
-      font_family = "FantasqueSansMono Nerd Font";
-      bold_font = "FantasqueSansMono Nerd Font";
-      italic_font = "FantasqueSansMono Nerd Font";
+      font_family = "JetBrainsMono Nerd Font";
+      bold_font = "JetBrainsMono Nerd Font";
+      italic_font = "JetBrainsMono Nerd Font";
       font_size = "13.0";
       allow_remote_control = "yes";
       listen_on = "unix:@mykitty";
@@ -40,7 +40,7 @@
       tab_powerline_style = "angled";
     };
     environment = {
-      THEME = "gruvbox";
+      #THEME = "gruvbox";
       #NVIM_STATUSLINE = "rocket-line";
       #TMUX_STATUSLINE = "cleanline";
     };
