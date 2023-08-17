@@ -15,7 +15,7 @@
   home.username = "mbhon1";
   home.homeDirectory = "/home/mbhon1";
   home.file = {};
-  home.stateVersion = "22.11"; 
+  home.stateVersion = "23.05"; 
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -58,7 +58,11 @@
   ];
 
   nixpkgs = {
-    overlays = [];
+    overlays = [
+      (self: super: {
+      fcitx-engines = pkgs.fcitx5;
+    })
+    ];
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);

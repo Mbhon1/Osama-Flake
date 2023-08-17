@@ -6,6 +6,6 @@
     ./kitty
     ./neofetch
     ./ranger
-    #./tmux
+    ./tmux
   ];
 }

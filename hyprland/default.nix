@@ -161,11 +161,11 @@
     # Launchers
     bind = SUPER, Return, exec, kitty
     bind = SUPER, W, exec, brave
-    bind = SUPER, E, exec, thunar
+    bind = SUPER, E, exec, nautilus
     bind = SUPER, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
     bind = ALT, G, exec, rofi -modi emoji -show emoji
     bind = ALT, W, exec, ~/.config/swww/changeWalls
-    bind = ALT, L, exec, swaylock 
+    bind = ALT, L, exec, wlogout
     bind = ALT, SPACE, exec, pkill rofi || ~/.config/rofi/launchers/type-6/launcher.sh 
 
     # Bindings

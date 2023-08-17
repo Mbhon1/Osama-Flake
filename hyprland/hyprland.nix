@@ -30,8 +30,8 @@
     xfce.thunar-archive-plugin
     gnome.nautilus
     lxappearance
-    pavucontrol
     mpv
+    kitty
     sassc
     supergfxctl
     hyprpicker
@@ -49,7 +49,8 @@
     xdg-utils
     xdg-user-dirs
     qt6.qtwayland
-
+    pulsemixer
+    imv
   ];
 
   services.udiskie.enable = true;
@@ -115,8 +116,6 @@
       '';
     };
   };
-
-  /* home.file.".config/hypr/hyprland.conf.bak".text = ''''; */
 
   home.file.".config/hypr/start.sh" = {
       executable = true;

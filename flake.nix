@@ -23,6 +23,7 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { 

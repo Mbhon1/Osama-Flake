@@ -8,7 +8,6 @@
       qemu.runAsRoot = true;
     };
   };
-  programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [
     # Need to add [File (in the menu bar) -> Add connection] when start for the first time
     virt-manager

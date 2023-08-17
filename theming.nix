@@ -6,8 +6,13 @@
   "FiraCode"
   "FantasqueSansMono"
   "CascadiaCode"
+  # "noto-fonts" 
+  # "noto-fonts-cjk" 
+  # "noto-fonts-emoji" 
+  # "noto-fonts-extra"
   ]; })
   font-awesome
+  material-design-icons
 
   qogir-theme
   papirus-icon-theme
@@ -29,16 +34,57 @@
 
   gtk = {
     enable = true;
-    font.name = "FantasqueSansMono Nerd Font";
+    font.name = "FantasqueSansMono Nerd Font Mono";
     cursorTheme = {
       name = "Qogir";
-      package = pkgs.gruvbox-dark-icons-gtk;
+      package = pkgs.qogir-icon-theme;
     };
     iconTheme = {
-      name = "Gruvbox-dark";
+      name = "Gruvbox Dark";
       package = pkgs.gruvbox-dark-icons-gtk;
     };
   };
+
+  # FIXME: all fonts are linked to /nix/var/nix/profiles/system/sw/share/X11/fonts
+  # fonts = {
+  #   # use fonts specified by user rather than default ones
+  #   enableDefaultFonts = false;
+  #   fontDir.enable = true;
+
+  #   fonts = with pkgs; [
+  #     # icon fonts
+  #     material-design-icons
+  #     font-awesome
+
+  #     noto-fonts 
+  #     noto-fonts-cjk 
+  #     noto-fonts-emoji 
+  #     noto-fonts-extra 
+
+  #     source-sans 
+  #     source-serif
+  #     source-han-sans
+  #     source-han-serif 
+
+  #     # nerdfonts
+  #     (nerdfonts.override {
+  #       fonts = [
+  #         "FiraCode"
+  #         "JetBrainsMono"
+  #         "Iosevka"
+  #       ];
+  #     })
+
+  #     # (pkgs.callPackage ../../fonts/icomoon-feather-icon-font.nix {})
+  #   ];
+
+  #   fontconfig.defaultFonts = {
+  #     serif = ["Noto Serif" "Noto Color Emoji"];
+  #     sansSerif = ["Noto Sans" "Noto Color Emoji"];
+  #     monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
+  #     emoji = ["Noto Color Emoji"];
+  #   };
+  # };
   
   # TODO: find how to set dark mode
   # gtk3.extraConfig = { gtk-application-prefer-dark-theme = 1; };
