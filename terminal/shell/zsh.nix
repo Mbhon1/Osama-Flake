@@ -83,6 +83,7 @@
     shellAliases = {
       cat = "bat --paging=never";
       mv = "mv -iv";
+      cls = "clear";
       cp = "cp -iv";
       rm = "rm -v";
       vi = "nvim";
@@ -102,7 +103,7 @@
       installed =
         "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq ";
       installedall = "nix-store --query --requisites /run/current-system ";
-      cleanup = "sudo nix-collect-garbage --delete-older-than 1d";
+      cleanup = "sudo nix-collect-garbage --delete-older-than 2d";
       listgen =
         "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
       forceclean = "sudo nix-collect-garbage -d";
@@ -206,8 +207,9 @@
 
       $HOME/.local/bin/colorscript -r
       source ~/.config/zsh/nvim
+      source ~/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
-      # Android stuido env for react native
+      # Android studio env for react native
       export ANDROID_HOME=$HOME/Android/Sdk
       export PATH=$PATH:$ANDROID_HOME/emulator
       export PATH=$PATH:$ANDROID_HOME/platform-tools

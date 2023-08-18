@@ -20,7 +20,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     NIXPKGS_ALLOW_UNFREE = "1";
-    # BROWSER = "flatpak run org.mozilla.firefox";
+    BROWSER = "brave";
     TERMINAL = "kitty";
     # SHELL = "${pkgs.zsh}/bin/zsh";
   };
@@ -62,6 +62,13 @@
       (self: super: {
       fcitx-engines = pkgs.fcitx5;
     })
+      # (final: prev: {
+      #    steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
+      #          extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
+      #           libgdiplus
+      #          ]);
+      #        });
+      #  })
     ];
     config = {
       allowUnfree = true;

@@ -10,12 +10,12 @@
     discord
     betterdiscordctl
     betterdiscord-installer
-    steam
     obsidian
+    # steam
     # obs-studio
     # obs-studio-plugins.wlrobs
     bottles
-    wineWowPackages.stable
+    # wineWowPackages.stable
     winetricks
     whatsapp-for-linux
     mailspring
