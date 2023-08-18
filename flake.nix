@@ -24,6 +24,7 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
   };
 
   outputs = { 
@@ -32,6 +33,7 @@
     spicetify-nix, 
     self,
     hyprland,
+    flatpaks,
     ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -39,6 +41,7 @@
         system = "x86_64-linux";
         modules = [ 
         /home/mbhon1/.config/nixos/configuration.nix
+        flatpaks.homeManagerModules.default
         home-manager.nixosModules.home-manager
         {
             home-manager.useGlobalPkgs = true;
