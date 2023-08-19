@@ -8,23 +8,15 @@
   wayland.windowManager.hyprland.extraConfig = ''
     monitor = DP-1, 1440x900@59, 0x0, 1
 
-    # exec-once=dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP #&& systemctl --user start hyprland-session.target
-
+    # Start up apps on boot
     exec-once = /usr/libexec/polkit-gnome-authentication-agent-1
     exec-once = ags
     exec-once = ~/.profile
     # exec-once = flatpak run com.transmissionbt.Transmission
-    # exec-once = hyprctl setcursor Qogir 24
     exec-once = swww init
-    # exec-once = playerctld daemon
-    # exec-once = eww daemon
-    # exec-once = swayidle -w
     exec-once = wl-paste --type text --watch cliphist store #Stores only text data
     # exec-once = wl-paste --type image --watch cliphist store #Stores only image data
     exec-once = wl-paste --type image --watch
-
-    # plugin = /usr/lib64/hyprland/libhyprbars.so
-    # plugin = /usr/lib64/hyprland/libborders-plus-plus.so
 
     # Settings
     general {
@@ -112,6 +104,7 @@
       }
     }
 
+    # Window rules
     windowrule = float, ^(Rofi)$
     windowrule = float, ^(org.gnome.Calculator)$
     windowrule = float, ^(thunar)$
@@ -128,6 +121,7 @@
     windowrule = float, ^(transmission-gtk)$
     windowrule = float, ^(ags)$
 
+    # Keybinds
     $main = SUPER
     $meta = ALT
 
@@ -156,6 +150,7 @@
 
     bind = ,Print, exec, ags run-js "ags.Service.Recorder.screenshot()"
     # bind = , Print, exec, sleep 1 && grimblast --notify save area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') &
+    bind = ,SHIFT Print, exec, wf-recorder --audio --file=/home/mbhon1/Pictures/Screenshots/$(date +'%s_screenrecord.mp4') &
 
 
     # Launchers

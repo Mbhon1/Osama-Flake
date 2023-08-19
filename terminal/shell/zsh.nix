@@ -84,9 +84,11 @@
       cat = "bat --paging=never";
       mv = "mv -iv";
       cls = "clear";
+      e = "exit";
       cp = "cp -iv";
       rm = "rm -v";
       vi = "nvim";
+      r = "ranger";
       ni = "npm install";
       next = "npx create-next-app@latest";
       lazy = "lazygit";
@@ -100,6 +102,11 @@
       tmls = "tmux ls";
       tmd = "tmux detach";
       tma = "tmux attach -t";
+      nf = "neofetch";
+      of = "onefetch";
+      nrs = "sudo nixos-rebuild switch";
+      hms = "home-manager switch";
+      hmg = "home-manager generations";
       installed =
         "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort | uniq ";
       installedall = "nix-store --query --requisites /run/current-system ";
@@ -109,7 +116,7 @@
       forceclean = "sudo nix-collect-garbage -d";
       nixremove = "nix-store --gc";
       cleanram = "sudo sh -c 'sync; echo 3 > /proc/sys/vm/drop_caches'";
-      hmg = "home-manager generations";
+      sR = "wf-recorder --audio --file=/home/mbhon1/Pictures/Screenshots/";
     };
     history = {
       path = "${config.xdg.dataHome}/zsh/zsh_history";
