@@ -89,6 +89,11 @@
     # "image/*" = [ "sxiv.desktop" ];
   };
 
+  # services.flatpak.repos.flathub = "https://flathub.org/repo/flathub.flatpakrepo";
+  # services.flatpak.packages = {
+  #   flathub.io.Figma_Linux.figma_linux
+  # };
+
   systemd.user.startServices = "sd-switch";
 
   programs.home-manager.enable = true;

@@ -121,7 +121,7 @@
     windowrule = float, ^(transmission-gtk)$
     windowrule = float, ^(ags)$
 
-    # Keybinds
+    # Keybindings
     $main = SUPER
     $meta = ALT
 
@@ -150,8 +150,6 @@
 
     bind = ,Print, exec, ags run-js "ags.Service.Recorder.screenshot()"
     # bind = , Print, exec, sleep 1 && grimblast --notify save area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') &
-    bind = ,SHIFT Print, exec, wf-recorder --audio --file=/home/mbhon1/Pictures/Screenshots/$(date +'%s_screenrecord.mp4') &
-
 
     # Launchers
     bind = SUPER, Return, exec, kitty
@@ -160,7 +158,7 @@
     bind = SUPER, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
     bind = ALT, G, exec, rofi -modi emoji -show emoji
     bind = ALT, W, exec, ~/.config/swww/changeWalls
-    bind = ALT, L, exec, wlogout
+    # bind = ALT, L, exec, wlogout
     bind = ALT, SPACE, exec, pkill rofi || ~/.config/rofi/launchers/type-6/launcher.sh 
 
     # Bindings

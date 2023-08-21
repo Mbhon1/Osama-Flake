@@ -11,13 +11,13 @@
     betterdiscordctl
     betterdiscord-installer
     obsidian
+    # NOTE: I use the flatpak version - whatsapp-for-linux
     # steam
     # obs-studio
     # obs-studio-plugins.wlrobs
-    bottles
     # wineWowPackages.stable
+    bottles
     winetricks
-    whatsapp-for-linux
     mailspring
     # (
     # let base = pkgs.appimageTools.defaultFhsEnvArgs;
@@ -33,14 +33,14 @@
     
   ];
 
-  programs.obs-studio = {
-    enable = true;
-    plugins = [
-      pkgs.obs-studio-plugins.obs-gstreamer
-      pkgs.obs-studio-plugins.obs-pipewire-audio-capture
-      pkgs.obs-studio-plugins.obs-vkcapture
-      pkgs.obs-studio-plugins.wlrobs
-    ];
-  };
+  # programs.obs-studio = {
+  #   enable = true;
+  #   plugins = [
+  #     pkgs.obs-studio-plugins.obs-gstreamer
+  #     pkgs.obs-studio-plugins.obs-pipewire-audio-capture
+  #     pkgs.obs-studio-plugins.obs-vkcapture
+  #     pkgs.obs-studio-plugins.wlrobs
+  #   ];
+  # };
   # programs.steam.enable = true;
 }
