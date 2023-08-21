@@ -55,7 +55,7 @@
 
       $HOME/.local/bin/colorscript -r
       source ~/.config/zsh/nvim
-      source $HOME/.config/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+      source $HOME/zsh-you-should-use/zsh-you-should-use.plugin.zsh
 
       # Android studio env for react native
       export ANDROID_HOME=$HOME/Android/Sdk
