@@ -3,6 +3,7 @@
   home.packages = with pkgs; [ git ];
   programs.git = {
     enable = true;
+    lfs.enable = true;
     userName = "Mbhon1";
     userEmail = "mbhoni@proton.me";
     signing = {

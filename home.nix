@@ -55,6 +55,7 @@
     gawk
     nettools
     coreutils
+    gnome.gnome-keyring
   ];
 
   nixpkgs = {

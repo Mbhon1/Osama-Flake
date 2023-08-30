@@ -1,12 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, ... }:
-
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
       # <home-manager/nixos>
     ];
@@ -18,23 +13,19 @@
   boot.loader.grub.configurationLimit = lib.mkDefault 10;
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "nixos"; 
+  # networking.wireless.enable = true;  
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Africa/Johannesburg";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_ZA.UTF-8";
 
-  # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
@@ -49,11 +40,10 @@
   };
 
   services = {
-    gvfs.enable = true; # Mount, trash, and other functionalities
-    tumbler.enable = true; # Thumbnail support for images
+    gvfs.enable = true; 
+    tumbler.enable = true; 
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mbhon1 = {
     isNormalUser = true;
     description = "Mbhon1";
@@ -68,7 +58,6 @@
   #  users.mbhon1 = import ./home.nix;
   # };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = lib.mkForce true;
   nix.gc = {
     automatic = lib.mkDefault true;
@@ -94,19 +83,17 @@
    })
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     home-manager
     steam-run
     wineWowPackages.stable
+    libsecret
+    virt-manager
   ];
   
   environment.shells = with pkgs; [ bash zsh ];
   # environment.variables.EDITOR = "nvim";
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
   # programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
@@ -120,17 +107,23 @@
   programs = {
     adb.enable = true;
     ssh.startAgent = true;
-    dconf.enable = true;
+    dconf = {
+      enable = true;
+      settings = {
+        "org/virt-manger/virt-manger/connections" = {
+          autoconnect = ["qemu:///system"];
+          uris = ["qemu:///system"];
+        };
+      };
+    };
   };
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
+  programs.seahorse.enable = true;
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.settings = {
     X11Forwarding = true;
@@ -148,6 +141,7 @@
       gnome.gnome-settings-daemon
     ];
   };
+  services.gnome.gnome-keyring.enable = true;
 
   sound.enable = lib.mkForce false;
   hardware.pulseaudio.enable = false;
@@ -164,7 +158,7 @@
 
   virtualisation.libvirtd = {
     enable = true;
-    # qemu.runAsRoot = true;
+    qemu.runAsRoot = true;
   };
 
   systemd = {
@@ -191,13 +185,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
-
+  
+  system.stateVersion = "23.05"; 
 }
