@@ -11,7 +11,8 @@
     betterdiscordctl
     betterdiscord-installer
     obsidian
-    # NOTE: I use the flatpak version - whatsapp-for-linux
+    # NOTE: I use the flatpak version - 
+    # whatsapp-for-linux
     # steam
     # obs-studio
     # obs-studio-plugins.wlrobs
@@ -19,6 +20,7 @@
     bottles
     winetricks
     mailspring
+    appimage-run
     # (
     # let base = pkgs.appimageTools.defaultFhsEnvArgs;
     # in pkgs.buildFHSUserEnv (base

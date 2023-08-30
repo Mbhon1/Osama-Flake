@@ -130,6 +130,6 @@
 
   home.file.".config/swww/changeWalls" = {
     executable = true;
-    source = ./swww/changeWalls;
+    source = ../swww/changeWalls;
   };
 }
