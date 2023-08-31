@@ -159,6 +159,14 @@
   virtualisation.libvirtd = {
     enable = true;
     qemu.runAsRoot = true;
+    qemu.package = with pkgs; [
+      qemu_kvm
+      qemu_full
+    ];
+    extraConfig = ''
+      unix_sock_group = "libvirt"
+      unix_sock_rw_perms = "0770"
+      '';
   };
 
   systemd = {

@@ -147,7 +147,7 @@ return {
   {
     "MaximilianLloyd/tw-values.nvim",
     keys = {
-        { "<leader>tw", "<cmd>TWValues<cr>", desc = "Show tailwind CSS values" },
+        { "<leader>Tw", "<cmd>TWValues<cr>", desc = "Show tailwind CSS values" },
     },
     opts = {
         border = "rounded", -- Valid window border style,
