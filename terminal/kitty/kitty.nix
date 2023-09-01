@@ -13,7 +13,7 @@
       font_family = "JetBrainsMono Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
-      font_size = "13.0";
+      font_size = "14.0";
       allow_remote_control = "yes";
       listen_on = "unix:@mykitty";
       confirm_os_window_close = 0;

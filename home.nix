@@ -9,7 +9,7 @@
   ./terminal
   ./utils
   ./desktop
-  ./pkgs
+  ./packages
   ];
   
 

@@ -29,7 +29,7 @@
 
   gtk = {
     enable = true;
-    font.name = "JetBrainsMono Nerd Font Mono";
+    font.name = "FantasqueSansMono Nerd Font Mono";
     cursorTheme = {
       name = "Qogir";
       package = pkgs.qogir-icon-theme;
