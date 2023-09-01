@@ -10,9 +10,9 @@
       dynamic_background_opacity = "yes";
       background_opacity = "0.7";
       cursor_shame = "beam";
-      font_family = "JetBrainsMono Nerd Font";
-      bold_font = "JetBrainsMono Nerd Font";
-      italic_font = "JetBrainsMono Nerd Font";
+      font_family = "FantasqueSansMono Nerd Font";
+      bold_font = "auto";
+      italic_font = "auto";
       font_size = "13.0";
       allow_remote_control = "yes";
       listen_on = "unix:@mykitty";

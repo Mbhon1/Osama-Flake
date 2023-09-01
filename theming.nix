@@ -1,4 +1,4 @@
-{pkgs,...}:
+{pkgs, config, lib, ...}:
 {
   home.packages = with pkgs; [
   (nerdfonts.override { fonts = [
@@ -95,6 +95,4 @@
   #     emoji = ["Noto Color Emoji"];
   #   };
   # };
-  
-  # TODO: find how to set dark mode
 }

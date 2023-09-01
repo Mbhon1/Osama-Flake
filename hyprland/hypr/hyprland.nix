@@ -18,7 +18,6 @@
     spicetify-cli
     wl-gammactl 
     wl-clipboard
-    # TODO: swaylock-effects
     wf-recorder
     hyprpicker 
     wayshot 

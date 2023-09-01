@@ -11,10 +11,9 @@
 
     sidebarConfig = true;
     theme = spicePkgs.themes.catppuccin-mocha;
-    colorScheme = "mauve";
+    colorScheme = "flamingo";
 
     enabledCustomApps = with spicePkgs.apps; [
-      localFiles
       lyrics-plus
       marketplace
       new-releases
@@ -25,14 +24,10 @@
       shuffle
       adblock
       playlistIcons
-      lastfm
       historyShortcut
-      bookmark
       fullAlbumDate
       groupSession
       powerBar
-      wikify
-      copyToClipboard
     ];
   };
 }

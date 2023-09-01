@@ -4,8 +4,6 @@ const { timeout, execAsync } = ags.Utils;
 
 const pinned = [
     'brave',
-    'kitty',
-    'discord',
     'steam',
     'mailspring',
     'nautilus',

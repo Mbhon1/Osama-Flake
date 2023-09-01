@@ -8,13 +8,12 @@
   ./apps.nix
   ./spicetify.nix
   ./terminal
-  # ./utils
+  ./utils
   ];
   
 
   home.username = "mbhon1";
   home.homeDirectory = "/home/mbhon1";
-  home.file = {};
   home.stateVersion = "23.05"; 
 
   home.sessionVariables = {
@@ -28,6 +27,10 @@
   home.sessionPath = [
     "$HOME/.local/bin"
   ];
+
+  home.file.".config/ags" = {
+    source = ./ags;
+  };
 
   home.packages = with pkgs; [
     nodejs
@@ -58,13 +61,6 @@
     gnome.gnome-keyring
     nix-prefetch
   ];
-
-  dconf.settings = {
-  "org/virt-manager/virt-manager/connections" = {
-    autoconnect = ["qemu:///system"];
-    uris = ["qemu:///system"];
-    };
-  };
 
   nixpkgs = {
     overlays = [

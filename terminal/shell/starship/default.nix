@@ -1,7 +1,4 @@
 { pkgs, lib, ...}:
-let 
-  count = "";
-in
 {
   home.packages = with pkgs; [
     starship
@@ -41,21 +38,21 @@ in
       line_break = {
         disabled = true;
       };
-      git_status = {
-        format = "[]($style)[$all_status$ahead_behind](bg:#689d6a fg:#312C2E)[ ]($style)";
-        style = "bg:none fg:#689d6a";
-        conflicted = "=";
-        ahead =	"⇡${count}";
-        behind = "⇣${count}";
-        diverged = "⇕⇡ ${count}⇣";
-        up_to_date = "";
-        untracked = "?${count}";
-        stashed = "";
-        modified = "!${count}";
-        staged = "+${count}";
-        renamed = "»";
-        deleted = "${count}";
-      };
+      # git_status = {
+      #   format = "[]($style)[$all_status$ahead_behind](bg:#689d6a fg:#312C2E)[ ]($style)";
+      #   style = "bg:none fg:#689d6a";
+      #   conflicted = "=";
+      #   ahead =	"⇡${count}";
+      #   behind = "⇣${count}";
+      #   diverged = "⇕⇡ ${count}⇣";
+      #   up_to_date = "";
+      #   untracked = "?${count}";
+      #   stashed = "";
+      #   modified = "!${count}";
+      #   staged = "+${count}";
+      #   renamed = "»";
+      #   deleted = "${count}";
+      # };
       cmd_duration = {
         min_time = 1;
         format = "[]($style)[[神](bg:#928374 fg:#312C2E bold)$duration](bg:#928374 fg:#312C2E)[ ]($style)";
@@ -69,5 +66,5 @@ in
         format = "[]($style)[[ ](bg:#d79923 fg:#312C2E bold)$time](bg:#d79923 fg:#312C2E)[ ]($style)";
       };
     };
-  };
+   };
 }
