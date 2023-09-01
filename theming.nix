@@ -6,10 +6,6 @@
   "FiraCode"
   "FantasqueSansMono"
   "CascadiaCode"
-  # "noto-fonts" 
-  # "noto-fonts-cjk" 
-  # "noto-fonts-emoji" 
-  # "noto-fonts-extra"
   ]; })
   font-awesome
   material-design-icons

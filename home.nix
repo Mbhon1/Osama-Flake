@@ -5,10 +5,11 @@
   imports = [
   ./theming.nix
   ./hyprland
-  ./apps.nix
   ./spicetify.nix
   ./terminal
   ./utils
+  ./desktop
+  ./pkgs
   ];
   
 
@@ -31,36 +32,6 @@
   home.file.".config/ags" = {
     source = ./ags;
   };
-
-  home.packages = with pkgs; [
-    nodejs
-    rustc
-    cargo
-    go
-    clang
-    gnumake
-    llvmPackages_9.libclang
-    sassc
-    meson
-    ninja
-    cmake
-    pkg-config
-    gobject-introspection-unwrapped
-    nmon
-    glib
-    jdk8
-    gnupatch
-    git
-    curl
-    wget
-    xdg-desktop-portal-gtk
-    libsecret
-    gawk
-    nettools
-    coreutils
-    gnome.gnome-keyring
-    nix-prefetch
-  ];
 
   nixpkgs = {
     overlays = [
@@ -91,7 +62,7 @@
     "video/png" = [ "mpv.desktop" ];
     "video/jpg" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
-    # "image/*" = [ "sxiv.desktop" ];
+    "image/*" = [ "sxiv.desktop" ];
   };
 
   # services.flatpak.repos.flathub = "https://flathub.org/repo/flathub.flatpakrepo";
@@ -102,16 +73,4 @@
   systemd.user.startServices = "sd-switch";
 
   programs.home-manager.enable = true;
-  programs.brave.enable = true;
-  programs.browserpass.enable = true;
-  programs.browserpass.browsers = ["brave"];
-  programs.password-store = {
-    enable = true;
-    package = pkgs.pass.withExtensions ( exts: [exts.pass-otp ]);
-    settings = {
-      PASSWORD_STORE_DIR = "${config.xdg.dataHome}/password-store";
-      PASSWORD_STORE_GPG_OPTS = "--no-throw-keyids";
-      PASSWORD_STORE_ENABLE_EXTENSIONS = "true";
-    };
-  };
 }

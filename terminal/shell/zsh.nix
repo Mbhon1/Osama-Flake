@@ -10,6 +10,14 @@
     tmux-mem-cpu-load
   ];
 
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "gruvbox_dark";
+      theme_background = false;
+    };
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;

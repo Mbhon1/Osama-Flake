@@ -10,7 +10,7 @@
       dynamic_background_opacity = "yes";
       background_opacity = "0.7";
       cursor_shame = "beam";
-      font_family = "FantasqueSansMono Nerd Font";
+      font_family = "JetBrainsMono Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       font_size = "13.0";
@@ -37,7 +37,7 @@
       tab_bar_style = "powerline";
       tab_bar_align = "left";
       tab_bar_min_tabs = 2;
-      tab_powerline_style = "angled";
+      tab_powerline_style = "round";
     };
     environment = {
       #THEME = "gruvbox";

@@ -1,4 +1,4 @@
-{pkgs, config, lib, ...}: 
+{pkgs, config, lib, inputs, ...}: 
 {
   wayland.windowManager.hyprland.extraConfig = ''
     monitor = DP-1, 1440x900@59, 0x0, 1
@@ -210,4 +210,8 @@
     bindm = SUPER, mouse:272, movewindow
     bindm = SUPER, mouse:273, resizewindow
     '';
+#  FIXME: wayland.windowManager.hyprland.plugins = [
+#   inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+#   "/absolute/path/to/plugin.so"
+# ];
 }

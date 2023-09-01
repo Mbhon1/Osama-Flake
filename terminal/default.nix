@@ -7,5 +7,6 @@
     ./neofetch
     ./ranger
     ./tmux
+    ./cava
   ];
 }
