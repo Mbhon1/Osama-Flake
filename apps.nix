@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 {
   home.packages = with pkgs; [
     zip
@@ -19,8 +19,13 @@
     # wineWowPackages.stable
     bottles
     winetricks
+    lutris
     mailspring
     appimage-run
+    yuzu-early-access # Nintendo Switch emulator
+    rpcs3 # PS3 Emulator
+    protontricks # Winetricks for proton prefixes
+    heroic # Epic Games Launcher for Linux
     # (
     # let base = pkgs.appimageTools.defaultFhsEnvArgs;
     # in pkgs.buildFHSUserEnv (base
@@ -34,6 +39,15 @@
     # )
     
   ];
+
+  services.kdeconnect.indicator = true;
+  systemd.user.services.kdeconnect-indicator.Service.Environment = lib.mkForce [
+    "LANG=en_US.UTF-8"
+    "LC_ALL=en_US.UTF-8"
+    "PATH=${config.home.profileDirectory}/bin"
+    "QT_PLUGIN_PATH=/run/current-system/sw/${pkgs.qt5.qtbase.qtPluginPrefix}"
+  ];
+  systemd.user.services.kdeconnect-indicator.Unit.After = ["graphical-session.target" "desktop-panel.service"];
 
   # programs.obs-studio = {
   #   enable = true;

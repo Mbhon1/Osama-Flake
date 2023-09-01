@@ -56,6 +56,7 @@
     nettools
     coreutils
     gnome.gnome-keyring
+    nix-prefetch
   ];
 
   dconf.settings = {

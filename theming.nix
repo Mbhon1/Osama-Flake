@@ -13,7 +13,6 @@
   ]; })
   font-awesome
   material-design-icons
-
   qogir-theme
   papirus-icon-theme
   qogir-icon-theme
@@ -34,7 +33,7 @@
 
   gtk = {
     enable = true;
-    font.name = "FantasqueSansMono Nerd Font Mono";
+    font.name = "JetBrainsMono Nerd Font Mono";
     cursorTheme = {
       name = "Qogir";
       package = pkgs.qogir-icon-theme;
@@ -42,6 +41,17 @@
     iconTheme = {
       name = "Gruvbox Dark";
       package = pkgs.gruvbox-dark-icons-gtk;
+    };
+    gtk2 = {
+      extraConfig = ''
+        gtk-application-prefer-dark-theme=1
+        '';
+    };
+    gtk3.extraConfig = { 
+      gtk-application-prefer-dark-theme = 1; 
+    };
+    gtk4.extraConfig = { 
+      gtk-application-prefer-dark-theme = 1; 
     };
   };
 
@@ -87,6 +97,4 @@
   # };
   
   # TODO: find how to set dark mode
-  # gtk3.extraConfig = { gtk-application-prefer-dark-theme = 1; };
-  # gtk4.extraConfig = { gtk-application-prefer-dark-theme = 1; };
 }

@@ -26,6 +26,7 @@
     ags.url = "github:Aylur/ags";
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
     # FIXME:flatpak.url = "github:yawnt/declarative-nix-flatpak/main";
+    # xdm.url = "https://github.com/subhra74/xdm.git";
   };
 
   outputs = { 
