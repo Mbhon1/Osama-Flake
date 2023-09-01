@@ -8,7 +8,7 @@ class ThemeService extends Service {
     static { Service.register(this); }
 
     _settingsPath = CONFIG_DIR + '/settings.json';
-    _defaultAvatar = `/home/${USER}/Pictures/swww-walls/houses.jpg`;
+    _defaultAvatar = `/home/${USER}/Pictures/avatars/donna.jpg`;
     _defaultTheme = Object.keys(themes)[0];
 
     constructor() {

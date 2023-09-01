@@ -8,7 +8,7 @@
   ./spicetify.nix
   ./terminal
   ./utils
-  ./desktop
+  ./desk
   ./packages
   ];
   
@@ -62,7 +62,7 @@
     "video/png" = [ "mpv.desktop" ];
     "video/jpg" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
-    "image/*" = [ "sxiv.desktop" ];
+    # "image/*" = [ "sxiv.desktop" ];
   };
 
   # services.flatpak.repos.flathub = "https://flathub.org/repo/flathub.flatpakrepo";
