@@ -1,4 +1,4 @@
-<p align="center">Welcome to Mbhon1 Flakes ❄️</p>
+<h1 align="center">Mbhon1 Flakes ❄️</h1>
 
 # Installation
 
@@ -7,7 +7,7 @@
 1. NixOS installed and running
 2. Flakes enabled
 
-> [!warning] Note: Don't copy the nixos directory as the configs are suited for my personal computer especially the `hardware.nix` file.
+> Note: Don't copy the nixos directory as the configs are suited for my personal computer especially the `hardware.nix` file.
 
 - `git clone https://github.com/Mbhon1/nixOS-dots.git`
 - `cd nixOS-dots`
@@ -41,6 +41,8 @@ Big s/o to these guys dots, they really helped me setup my own little nixOS envi
 
 # TODO
 
--[ ] Make a script for easy installation for other users.
--[ ] Migrate the rest of my arch dotfiles to .nix. 
--[ ] Fix steam and integrate with .nix.
+- [ ] Make a script for easy installation for other users.
+
+- [ ] Migrate the rest of my arch dotfiles to .nix.
+
+- [ ] Fix steam and integrate with .nix.
