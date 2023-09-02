@@ -13,7 +13,6 @@
     alejandra
     statix
     nil
-    # neovim
   ];
 
   programs.neovim = {

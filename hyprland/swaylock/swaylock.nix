@@ -13,7 +13,7 @@
       indicator = true;
       screenshot = true;
       effect-blur = "9x9";
-      font = "JetBrainsMono Nerd Font Mono";
+      font = "JetBrainsMono Nerd Font";
       indicator-radius = "120";
       indicator-thickness = "16";
       line-color = "32302f";

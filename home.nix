@@ -28,10 +28,11 @@
   home.sessionPath = [
     "$HOME/.local/bin"
   ];
-
-  home.file.".config/ags" = {
-    source = ./ags;
-  };
+  
+# FIXME: trying to symlink ags so I can alter from home-manager
+  # home.file.".config/ags.home" = {
+  #   source = ./ags;
+  # };
 
   nixpkgs = {
     overlays = [

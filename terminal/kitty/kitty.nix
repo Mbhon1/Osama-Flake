@@ -10,7 +10,7 @@
       dynamic_background_opacity = "yes";
       background_opacity = "0.7";
       cursor_shame = "beam";
-      font_family = "JetBrainsMono Nerd Font Mono";
+      font_family = "JetBrainsMono Nerd Font";
       bold_font = "auto";
       italic_font = "auto";
       font_size = "14.0";

@@ -39,7 +39,7 @@
       pull = { ff = "only"; };
       commit = { 
         verbose = true;
-        gpgsign = false;
+        gpgsign = true;
       };
     };
   };
