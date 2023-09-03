@@ -1,16 +1,16 @@
-<h1 align="center">Mbhon1 Flakes ❄️</h1>
+<h1 align="center">Ōsama ❄️</h1>
 
 # Installation
 
 ## Pre-requisition
 
-1. NixOS installed and running
-2. Flakes enabled
+1. NixOS installed and running.
+2. [Flakes](https://nixos.wiki/wiki/Flakes) enabled.
 
-> Note: Don't copy the nixos directory as the configs are suited for my personal computer especially the `hardware.nix` file.
+> NOTE: Don't copy the nixos directory as the configs are suited for my personal computer especially the `hardware.nix` file. You may however use the `configuration.nix` for reference with regards to some of the services I have enabled.
 
-- `git clone https://github.com/Mbhon1/nixOS-dots.git`
-- `cd nixOS-dots`
+- `git clone https://github.com/Mbhon1/Osama-Flake.git`
+- `cd Osama-Flake`
 - `cp -r ags $HOME/.config`
 - `cp -r desk hyprland packages terminal utils *.nix $HOME/.config/home-manager`
 
@@ -45,4 +45,4 @@ Big s/o to these guys dots, they really helped me setup my own little nixOS envi
 
 - [ ] Migrate the rest of my arch dotfiles to .nix.
 
-- [ ] Fix steam and integrate with .nix.
+- [ ] Migrate steam and integrate with .nix.
