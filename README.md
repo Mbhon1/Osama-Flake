@@ -1,13 +1,13 @@
 <h1 align="center">Ōsama ❄️</h1>
 <h1 align="center">
 <img alt="os" src="https://img.shields.io/badge/build-hyprland-blue?style=for-the-badge&logo=nixos&label=NixOS&labelColor=%23fff&color=%20%237EBAE4
-">
+"/>
 <img alt="commit history" src="https://img.shields.io/github/last-commit/Mbhon1/Osama-Flake?style=for-the-badge&logo=git&label=Commit%3F&labelColor=%23ebdbb2&color=%23F05032
-">
+"/>
 <img alt="repo size" src="https://img.shields.io/github/repo-size/Mbhon1/Osama-Flake?style=for-the-badge&logo=docusign&label=Size&labelColor=%23698d6a&color=%23FFCC22
-">
+"/>
 <img alt="license: mit" src="https://img.shields.io/github/license/mbhon1/osama-flake?style=for-the-badge
-">
+"/>
 </h1>
 
 ---
