@@ -10,9 +10,9 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   opts = {
-    dir = "/home/mbhon1/Documents/Obsidian",  
+    dir = "Obsidian",  
     daily_notes = {
-    folder = "/home/mbhon1/Documents/Obsidian/Journal",
+    folder = "Journal",
     -- date_format = "%Y-%m-%d"
     },
   },

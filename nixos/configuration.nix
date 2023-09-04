@@ -1,17 +1,20 @@
 { config, pkgs, lib, ... }:
 {
   imports =
-    [ 
+    [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # <home-manager/nixos>
     ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.configurationLimit = lib.mkDefault 10;
-  boot.extraModprobeConfig = "options kvm_intel nested=1";
+  boot = {
+    loader.grub = {
+      enable = true;
+      device = "/dev/sda";
+      useOSProber = true;
+      configurationLimit = lib.mkDefault 10;
+    };
+    extraModprobeConfig = "options kvm_intel nested=1";
+  };
 
   networking.hostName = "nixos"; 
   # networking.wireless.enable = true;  
@@ -74,25 +77,27 @@
    (self: super: {
      fcitx-engines = pkgs.fcitx5;
    })
-   (final: prev: {
-     steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
-       extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
-         libgdiplus
-       ]);
-     });
-   })
+   #(final: prev: {
+   #  steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
+   #    extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
+   #      libgdiplus
+   #    ]);
+   #  });
+   #})
   ];
 
   environment.systemPackages = with pkgs; [
     home-manager
-    steam-run
+    # steam-run
     wineWowPackages.stable
-    libsecret
     virt-manager
+    libsecret
+    qemu_full
+    qemu_kvm
   ];
-  
+
   environment.shells = with pkgs; [ bash zsh ];
-  # environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "nvim";
 
   # programs.mtr.enable = true;
   programs.gnupg.agent = {
@@ -101,6 +106,7 @@
   #  PermitRootLogin = "prohibit-password";
   #  PasswordAuthentication = false;
   };
+  programs.seahorse.enable = true;
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
@@ -109,20 +115,14 @@
     ssh.startAgent = true;
     dconf = {
       enable = true;
-      settings = {
-        "org/virt-manger/virt-manger/connections" = {
-          autoconnect = ["qemu:///system"];
-          uris = ["qemu:///system"];
-        };
       };
-    };
   };
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
-  programs.seahorse.enable = true;
+  # programs.steam = {
+     # enable = true;
+     # remotePlay.openFirewall = true;
+     # dedicatedServer.openFirewall = true;
+  # };
+
 
   services.openssh.enable = true;
   services.openssh.settings = {
@@ -144,7 +144,7 @@
   services.gnome.gnome-keyring.enable = true;
 
   sound.enable = lib.mkForce false;
-  hardware.pulseaudio.enable = false;
+  # hardware.pulseaudio.enable = false;
 
   security.polkit.enable = true;
   security.rtkit.enable = true;
@@ -159,12 +159,12 @@
   virtualisation.libvirtd = {
     enable = true;
     qemu.runAsRoot = true;
-    qemu.package = with pkgs; [
-      qemu_kvm
-      qemu_full
-    ];
+    #qemu.package = [
+     # pkgs.qemu_kvm
+      #pkgs.qemu_full
+    #];
     extraConfig = ''
-      unix_sock_group = "libvirt"
+      unix_sock_group = "libvirtd"
       unix_sock_rw_perms = "0770"
       '';
   };
@@ -193,6 +193,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  
+
   system.stateVersion = "23.05"; 
+
 }
