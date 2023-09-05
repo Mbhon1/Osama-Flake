@@ -1,0 +1,35 @@
+{
+  imports = [
+    ./utils.nix
+    ./cmp.nix
+    ./jaq.nix
+    ./alpha.nix
+    ./flash.nix
+    ./noice.nix
+    ./fidget.nix
+    ./tabset.nix
+    ./comment.nix
+    ./lspsaga.nix
+    ./neotest.nix
+    ./null-ls.nix
+    ./spectre.nix
+    ./gitsigns.nix
+    ./obsidian.nix
+    ./undotree.nix
+    ./autopairs.nix
+    ./colorizer.nix
+    ./nvim-tree.nix
+    ./telescope.nix
+    ./which-key.nix
+    ./bufferline.nix
+    ./toggleterm.nix
+    ./treesitter.nix
+    ./persistance.nix
+    ./regexplainer.nix
+    ./buffer-remove.nix
+    ./todo-comments.nix
+    ./dap
+    ./theme
+    ./lsp
+  ];
+}

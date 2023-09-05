@@ -1,0 +1,17 @@
+{
+  home.file.".config/nvim/lua/plugins/lsp/settings/yamlls.lua".text = ''
+    return {
+  settings = {
+    yaml = {
+      schemaStore = {
+        -- You must disable built-in schemaStore support if you want to use
+        -- this plugin and its advanced options like `ignore`.
+        enable = false,
+      },
+      schemas = require("schemastore").yaml.schemas(),
+    },
+  },
+}
+    '';
+
+}
