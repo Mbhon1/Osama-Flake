@@ -37,7 +37,7 @@
       defaultSession = "hyprland";
       gdm = {
         enable = true;
-	wayland = true;
+	      wayland = true;
       };
     };
   };

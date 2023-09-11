@@ -4,6 +4,7 @@
     unzip
     zip
     nodejs
+    nodePackages.nodemon
     rustc
     cargo
     go
