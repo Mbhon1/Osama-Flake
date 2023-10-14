@@ -30,11 +30,11 @@
     defaultOptions = ["--reverse" "--ansi"];
   };
 
-  programs.exa = {
-    enable = true;
-    enableAliases = true;
-    icons = true;
-    extraOptions = [ "--group-directories-first" "--header" ];
-    git = true;
-  };
+  # programs.exa = {
+  #   enable = true;
+  #   enableAliases = true;
+  #   icons = true;
+  #   extraOptions = [ "--group-directories-first" "--header" ];
+  #   git = true;
+  # };
 }
