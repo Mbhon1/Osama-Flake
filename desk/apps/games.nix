@@ -2,14 +2,14 @@
 {
   home.packages = with pkgs; [
     # wineWowPackages.stable
-    bottles
+   # bottles
     winetricks
-    lutris
+   # lutris
     appimage-run
-    yuzu-early-access 
-    rpcs3 
+   # yuzu-early-access 
+   # rpcs3 
     protontricks 
-    heroic 
+   # heroic 
     # (
     # let base = pkgs.appimageTools.defaultFhsEnvArgs;
     # in pkgs.buildFHSUserEnv (base

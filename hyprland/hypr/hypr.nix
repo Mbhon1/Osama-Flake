@@ -5,7 +5,7 @@
 
     # Start up apps on boot
     exec-once = /usr/libexec/polkit-gnome-authentication-agent-1
-    exec-once = ags
+    exec-once = ags -b hypr
     exec-once = ~/.profile
     # exec-once = flatpak run com.transmissionbt.Transmission
     exec-once = swww init
@@ -121,29 +121,29 @@
     $meta = ALT
 
     # AGS
-    bind = CTRL SHIFT, R, exec, pkill ags ; ags
-    bind = SUPER, D, exec, ags toggle-window overview
-    bind = , XF86PowerOff, exec, ags toggle-window powermenu
-    bind = SUPER, SPACE, exec, ags toggle-window applauncher
-    bind  = , XF86Launch4, exec, ags run-js "ags.Service.Recorder.start()"
+    bind = CTRL SHIFT, R, exec, ags -b hypr quit; ags -b hypr
+    bind = SUPER, D, exec, ags -b hypr toggle-window overview
+    bind = , XF86PowerOff, exec, ags -b hypr toggle-window powermenu
+    bind = SUPER, R, exec, ags -b hypr toggle-window applauncher 
+    bind  = , XF86Launch4, exec, ags -b hypr -r "recorder.start()"
     # bind  = , XF86Launch1, exec, 
 
     # Print
     # Laptop
-    bindle = , XF86MonBrightnessUp,     exec, ags run-js "ags.Service.Brightness.screen += 0.02; ags.Service.Indicator.display()"
-    bindle = , XF86MonBrightnessDown,   exec, ags run-js "ags.Service.Brightness.screen -= 0.02; ags.Service.Indicator.display()"
-    bindle = , XF86KbdBrightnessUp,     exec, ags run-js "ags.Service.Brightness.kbd++; ags.Service.Indicator.kbd()"
-    bindle = , XF86KbdBrightnessDown,   exec, ags run-js "ags.Service.Brightness.kbd--; ags.Service.Indicator.kbd()"
-    bindle = , XF86AudioRaiseVolume,    exec, ags run-js "ags.Service.Audio.speaker.volume += 0.05; ags.Service.Indicator.speaker()"
-    bindle = , XF86AudioLowerVolume,    exec, ags run-js "ags.Service.Audio.speaker.volume -= 0.05; ags.Service.Indicator.speaker()"
-    bindl  = , XF86AudioPlay,           exec, ags run-js "ags.Service.Mpris.getPlayer()?.playPause()"
-    bindl  = , XF86AudioStop,           exec, ags run-js "ags.Service.Mpris.getPlayer()?.stop()"
-    bindl  = , XF86AudioPause,          exec, ags run-js "ags.Service.Mpris.getPlayer()?.pause()"
-    bindl  = , XF86AudioPrev,           exec, ags run-js "ags.Service.Mpris.getPlayer()?.previous()"
-    bindl  = , XF86AudioNext,           exec, ags run-js "ags.Service.Mpris.getPlayer()?.next()"
-    bindl  = , XF86AudioMicMute,        exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindle = , XF86MonBrightnessUp,     exec, ags -b hypr -r "brightness.screen += 0.05; indicator.display()"
+    bindle = , XF86MonBrightnessDown,   exec, ags -b hypr -r "brightness.screen -= 0.05; indicator.display()"
+    bindle = , XF86KbdBrightnessUp,     exec, ags -b hypr -r "brightness.kbd++; indicator.kbd()"
+    bindle = , XF86KbdBrightnessDown,   exec, ags -b hypr -r "brightness.kbd--; indicator.kbd()"
+    bindle = , XF86AudioRaiseVolume,    exec, ags -b hypr -r "audio.speaker.volume += 0.05; indicator.speaker()"
+    bindle = , XF86AudioLowerVolume,    exec, ags -b hypr -r "audio.speaker.volume -= 0.05; indicator.speaker()"
+    bindl  = , XF86AudioPlay,           exec, ags -b hypr -r "mpris.players.pop()?.playPause()"
+    bindl  = , XF86AudioStop,           exec, ags -b hypr -r "mpris.players.pop()?.stop()"
+    bindl  = , XF86AudioPause,          exec, ags -b hypr -r "mpris.players.pop()?.pause()"
+    bindl  = , XF86AudioPrev,           exec, ags -b hypr -r "mpris.players.pop()?.previous()"
+    bindl  = , XF86AudioNext,           exec, ags -b hypr -r "mpris.players.pop()?.next()"
+    bindl  = , XF86AudioMicMute,        exec, ags -b hypr -r "audio.microphone.isMuted = !audio.microphone.isMuted" 
 
-    bind = SUPER SHIFT, P, exec, ags run-js "ags.Service.Recorder.screenshot()"
+    bind = SUPER SHIFT, P, exec, ags -b hypr run-js "ags.Service.Recorder.screenshot()"
     # bind = , Print, exec, sleep 1 && grimblast --notify save area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') &
 
     # Launchers
@@ -154,7 +154,8 @@
     bind = ALT, G, exec, rofi -modi emoji -show emoji
     bind = ALT, W, exec, ~/.config/swww/changeWalls
     # bind = ALT, L, exec, wlogout
-    bind = ALT, SPACE, exec, pkill rofi || ~/.config/rofi/launchers/type-6/launcher.sh 
+    bind = ALT, SPACE, exec, pkill rofi || ~/.config/rofi/launchers/type-6/launcher.sh
+    bind = ALT, S, exec, spotify
 
     # Bindings
     bind = CTRL ALT, Delete, exit

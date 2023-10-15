@@ -8,6 +8,7 @@
     lazygit
     tmux
     tmux-mem-cpu-load
+    eza
   ];
 
   programs.btop = {
@@ -26,7 +27,6 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
-        # "you-should-use"
         "git"
         "colorize"
         "colored-man-pages"
@@ -36,7 +36,7 @@
     };
     plugins = with pkgs; [
       {
-        name = "forgit"; # i forgit :skull:
+        name = "forgit"; 
         file = "forgit.plugin.zsh";
         src = fetchFromGitHub {
           owner = "wfxr";

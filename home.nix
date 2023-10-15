@@ -33,6 +33,7 @@
   # home.file.".config/ags.home" = {
   #   source = ./ags;
   # };
+  manual.manpages.enable = false;
 
   nixpkgs = {
     overlays = [

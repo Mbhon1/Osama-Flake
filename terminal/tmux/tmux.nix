@@ -4,6 +4,10 @@
     tmux
   ];
 
+  home.file."/home/mbhon1/.tmux/" = {
+    source = ./tmux;
+  };
+
   home.file."/home/mbhon1/.tmux.conf".text =''
      # List of plugins
       set -g @plugin 'tmux-plugins/tpm'

@@ -100,7 +100,7 @@
     #   '';
   };
 
-  # home.file.".config/nvim.def" = {
-  #   source = ./neovim;
-  # };
+  home.file.".config/nvim" = {
+    source = ./neovim;
+  };
 }

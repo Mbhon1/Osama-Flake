@@ -8,7 +8,7 @@
     discord
     betterdiscordctl
     obsidian
-    mailspring
+  #  mailspring
   ];
 
   programs.brave.enable = true;
