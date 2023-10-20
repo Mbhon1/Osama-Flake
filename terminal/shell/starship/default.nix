@@ -12,10 +12,10 @@
       "$directory" 
       "$git_branch" 
       "$character"
-      /* "$os" */
+      "$os"
       "$nix_shell"
       ];
-      right_format = "$git_status$cmd_duration$time";
+      right_format = "$git_status$cmd_duration";
       git_branch = {
         style = "bg:none fg:#8EC07C";
         format = "[]($style)[[ ](bg:#8EC07C fg:#312C2E bold)$branch](bg:#8EC07C fg:#312C2E)[ ]($style)";
@@ -60,21 +60,21 @@
       #   renamed = "»";
       #   deleted = "${count}";
       # };
-      # os = {
-      #   disabled = false;
-      #   # format = "[](fg:blue)[$symbol](bg:blue fg:black)[](fg:blue)";
-      #   format = "$symbol";
-      # };
-      # os.symbols = {
-      #   Arch = "[ ](fg:bright-blue)";
-      #   Debian = "[ ](fg:red)";
-      #   EndeavourOS = "[ ](fg:purple)";
-      #   Fedora = "[ ](fg:blue)";
-      #   NixOS = "[ ](fg:bright-white)";
-      #   openSUSE = "[ ](fg:green)";
-      #   SUSE = "[ ](fg:green)";
-      #   Ubuntu = "[ ](fg:bright-purple)";
-      # };
+      os = {
+        disabled = false;
+        # format = "[](fg:blue)[$symbol](bg:blue fg:black)[](fg:blue)";
+        format = "$symbol";
+      };
+      os.symbols = {
+        Arch = "[ ](fg:bright-blue)";
+        Debian = "[ ](fg:red)";
+        EndeavourOS = "[ ](fg:purple)";
+        Fedora = "[ ](fg:blue)";
+        NixOS = "[ ](fg:bright-white)";
+        openSUSE = "[ ](fg:green)";
+        SUSE = "[ ](fg:green)";
+        Ubuntu = "[ ](fg:bright-purple)";
+      };
       nix_shell = {
         disabled = false;
         format = "[](fg:white)[ ](bg:white fg:black)[](fg:white) ";
@@ -85,12 +85,12 @@
         disabled = false;
         style = "bg:none fg:#928374";
       };
-      time = {
-        disabled = false;
-        time_format = "%R"; # hour:minute format
-        style = "bg:none fg:#d79923";
-        format = "[]($style)[[ ](bg:#d79923 fg:#312C2E bold)$time](bg:#d79923 fg:#312C2E)[ ]($style)";
-      };
+      # time = {
+      #   disabled = false;
+      #   time_format = "%R"; # hour:minute format
+      #   style = "bg:none fg:#d79923";
+      #   format = "[]($style)[[ ](bg:#d79923 fg:#312C2E bold)$time](bg:#d79923 fg:#312C2E)[ ]($style)";
+      # };
       status = {
         symbol = "✗";
         not_found_symbol = "󰍉 Not Found";
