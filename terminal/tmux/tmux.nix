@@ -6,6 +6,7 @@
     tmux-mem-cpu-load
   ];
 
+<<<<<<< Updated upstream
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -22,6 +23,27 @@
 
     extraConfig = ''
       # set -g default-terminal "screen-256color"
+=======
+  home.file."/home/luis/.tmux/" = {
+    source = ./tmux;
+  };
+
+  home.file."/home/luis/.tmux.conf".text =''
+     # List of plugins
+      set -g @plugin 'tmux-plugins/tpm'
+      set -g @plugin 'tmux-plugins/tmux-sensible'
+      set -g @plugin 'erikw/tmux-powerline'
+      set -g @plugin 'thewtex/tmux-mem-cpu-load'
+      set -g @plugin 'christoomey/vim-tmux-navigator'
+      set -g @plugin 'tmux-plugins/tmux-resurrect'
+      set -g @plugin 'tmux-plugins/tmux-continuum'
+      set -g @t-fzf-promt ' '
+      set -g @plugin 'joshmedeski/t-smart-tmux-session-manager'
+
+      # FIXME: set -g status-right '#[fg=green]#($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load --colors --powerline-right --interval 2)#[default]'
+      # Options
+      set -g default-terminal "screen-256color"
+>>>>>>> Stashed changes
       set -g mouse on
 
       # leader key

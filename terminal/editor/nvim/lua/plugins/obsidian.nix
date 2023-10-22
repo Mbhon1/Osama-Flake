@@ -3,7 +3,7 @@
     return {
   "epwalsh/obsidian.nvim",
   lazy = true,
-  -- event = { "BufReadPre /home/mbhon1/Documents/Obsidian/**.md" },
+  -- event = { "BufReadPre /home/luis/Documents/Obsidian/**.md" },
   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
   event = { "BufReadPre " .. vim.fn.expand "~" .. "/Documents/Obsidian/**.md" },
   dependencies = {

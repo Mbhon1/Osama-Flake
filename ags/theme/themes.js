@@ -150,7 +150,7 @@ var ivory = {
 
 var cutefish = {
   ...kitty_dark,
-  wallpaper: WP + "/home/mbhon1/Pictures/swww-walls/houses.jpg",
+  wallpaper: WP + "/home/luis/Pictures/swww-walls/houses.jpg",
   name: "cutefish",
   icon: "󰈺",
   accent: "lighten($blue, 20%)",

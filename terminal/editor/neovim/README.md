@@ -15,11 +15,11 @@
 </div>
 
 <p align="center">
-    <a href="https://github.com/mbhon1/neovim-config/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/mbhon1/neovim-config?color=%23C6BC39&style=for-the-badge">
+    <a href="https://github.com/luis/neovim-config/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/luis/neovim-config?color=%23C6BC39&style=for-the-badge">
     </a>
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mbhon1/neovim-config?color=%23C63989&style=for-the-badge">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/mbhon1/neovim-config?color=%2327d863&style=for-the-badge">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luis/neovim-config?color=%23C63989&style=for-the-badge">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/luis/neovim-config?color=%2327d863&style=for-the-badge">
 </p>
 
 ## ✍️ Intro
@@ -34,7 +34,7 @@
 ## ⌨️ Configs and Usage
 
 - Make a backup of your `.config/nvim` before cloning repo.
-- Clone the repo `git clone https://github.com/Mbhon1/OsamaVim ~/.config/nvim`.
+- Clone the repo `git clone https://github.com/luis/OsamaVim ~/.config/nvim`.
 - Learn more about tabnine [here](https://www.tabnine.com/) if you wish to use AI assistance.
 - Follow the guide on the official repo to enable [live-server.nvim](https://github.com/aurum77/live-server.nvim).
 - Use Mason to install LSP's `leader/space-button + l + m`.

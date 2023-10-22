@@ -20,7 +20,7 @@
   			#  prin "" "Hyprland"
   			# info "" locale
   			# info "" uptime
-  				prin "" "github.com/Mbhon1"
+  				prin "" "github.com/luis"
 
 
   			# info "GPU Driver" gpu_driver  # Linux/macOS only

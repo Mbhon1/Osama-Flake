@@ -86,7 +86,7 @@
         };
       } 
     ];
-    cdpath = ["." "/home/mbhon1" "/home/mbhon1/Pictures"];
+    cdpath = ["." "/home/luis" "/home/luis/Pictures"];
     dotDir = ".config/zsh";
     shellAliases = {
       cat = "bat --paging=never";
@@ -124,7 +124,7 @@
       forceclean = "sudo nix-collect-garbage -d";
       nixremove = "nix-store --gc";
       cleanram = "sudo sh -c 'sync; echo 3 > /proc/sys/vm/drop_caches'";
-      sR = "wf-recorder --audio --file=/home/mbhon1/Pictures/Screenshots/";
+      sR = "wf-recorder --audio --file=/home/luis/Pictures/Screenshots/";
     };
     history = {
       path = "${config.xdg.dataHome}/zsh/zsh_history";

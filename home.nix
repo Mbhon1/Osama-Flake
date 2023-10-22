@@ -13,8 +13,8 @@
   ];
   
 
-  home.username = "mbhon1";
-  home.homeDirectory = "/home/mbhon1";
+  home.username = "luis";
+  home.homeDirectory = "/home/luis";
   home.stateVersion = "23.05"; 
 
   home.sessionVariables = {

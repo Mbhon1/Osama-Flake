@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Mbhon1";
+    userName = "luis";
     userEmail = "mbhoni@proton.me";
     signing = {
       key = "EFD6080989EAFF1AFB2FC15CE1A2E447A9E91BB4";

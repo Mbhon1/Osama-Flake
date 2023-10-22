@@ -1,6 +1,6 @@
 { config, lib, ... }: 
 {
-  xdg.configFile."/home/mbhon1/.zshrc".text = ''
+  xdg.configFile."/home/luis/.zshrc".text = ''
     export VISUAL='nvim'
       export EDITOR='nvim'
       export TERMINAL='kitty'
@@ -9,9 +9,9 @@
       export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
       export PATH=$PATH:~/.local/bin/
       export PATH=/tmp/lazy-lvim/bin:$PATH
-      export PATH="$PATH:/home/mbhon1/.nix-profile/bin/elixir"
-      export PATH="$PATH:/home/mbhon1/.nix-profile/bin/swww"
-      export PATH="$PATH:/home/mbhon1/.nix-profile/bin/swww-daemon"
+      export PATH="$PATH:/home/luis/.nix-profile/bin/elixir"
+      export PATH="$PATH:/home/luis/.nix-profile/bin/swww"
+      export PATH="$PATH:/home/luis/.nix-profile/bin/swww-daemon"
       export NIX_PATH=nixpkgs=https://github.com/NixOS/nixpkgs/archive/74e2faf5965a12e8fa5cff799b1b19c6cd26b0e3.tar.gz
       
       autoload -Uz compinit
