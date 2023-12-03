@@ -1,7 +1,8 @@
 {pkgs, config, lib, inputs, ...}: 
 {
   wayland.windowManager.hyprland.extraConfig = ''
-    monitor = DP-1, 1440x900@59, 0x0, 1
+    #monitor = DP-1, 1440x900@59, 0x0, 1
+    monitor = DP-1, 1024x768@59, 0x0, 1
 
     # Start up apps on boot
     exec-once = /usr/libexec/polkit-gnome-authentication-agent-1
@@ -12,6 +13,8 @@
     exec-once = wl-paste --type text --watch cliphist store #Stores only text data
     # exec-once = wl-paste --type image --watch cliphist store #Stores only image data
     exec-once = wl-paste --type image --watch
+    exec-once = systemctl --user start graphical-session.target
+    exec-once = systemctl start polkit-gnome-authentication-agent-1 
 
     # Settings
     general {

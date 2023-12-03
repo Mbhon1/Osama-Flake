@@ -8,6 +8,7 @@
     discord
     betterdiscordctl
     obsidian
+    gparted
   #  mailspring
   ];
 
