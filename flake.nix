@@ -1,5 +1,5 @@
 {
-  description = "Home manager Configuration for Mbhon1";
+  description = "Home manager Configuration for Mbhon1's Flake.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

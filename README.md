@@ -6,7 +6,7 @@
 <img alt="license: mit" src="https://img.shields.io/github/license/mbhon1/osama-flake?style=for-the-badge">
 </h1>
 
-<p align="center">Welcome to Mbhon1 Flakes ❄️</p>
+<h2 align="center">Welcome to Mbhon1's Flakes ❄️</h2>
 
 # Installation
 
