@@ -46,6 +46,6 @@ Big s/o to these guys dots, they really helped me setup my own little nixOS envi
 
 # TODO
 
--[ ] Make a script for easy installation for other users.
--[ ] Migrate the rest of my arch dotfiles to .nix. 
--[ ] Fix steam and integrate with .nix.
+- [ ] Make a script for easy installation for other users.
+- [x] Migrate the rest of my arch dotfiles to .nix. 
+- [x] Fix steam and integrate with .nix.
