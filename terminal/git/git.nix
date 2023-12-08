@@ -10,7 +10,6 @@
       key = "EFD6080989EAFF1AFB2FC15CE1A2E447A9E91BB4";
       signByDefault = true;
     };
-
     aliases = {
       st = "status";
       p = "pull";

@@ -53,18 +53,13 @@
       '';
   };
 
-  xdg.configFile."kitty/themes/gruvbox.conf".text = import ./gruvbox.nix; 
-  xdg.dataFile."kitty/themes" = {
-    source = ./themes;
-    recursive = true;
-  };
-  xdg.configFile."kitty/kitty.conf".text = ''
-    include ./kitty.conf
-    env THEME=gruvbox
-    '';
-  # xdg.dataFile."fonts/FantasqueSansMono.tff".source = ./FantasqueSansMono.tff;
-  # xdg.dataFile."fonts/FantasqueSansMono" = {
-  #   source = ./FantasqueSansMono;
+  # xdg.configFile."kitty/themes/gruvbox.conf".text = import ./gruvbox.nix; 
+  # xdg.dataFile."kitty/themes" = {
+  #   source = ./themes;
   #   recursive = true;
   # };
+  # xdg.configFile."kitty/kitty.conf".text = ''
+  #   include ./kitty.conf
+  #   env THEME=gruvbox
+  #   '';
 }

@@ -1,15 +1,17 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # wineWowPackages.stable
-   # bottles
     winetricks
-   # lutris
     appimage-run
-   # yuzu-early-access 
-   # rpcs3 
     protontricks 
-   # heroic 
+    # NOTE: For most of my gaming I try to use flatpaks,
+    # these are just reminders for what I need to iinstall from flathub.org.
+    # bottles
+    # wineWowPackages.stable
+    # lutris
+    # yuzu-early-access 
+    # rpcs3 
+    # heroic 
     # (
     # let base = pkgs.appimageTools.defaultFhsEnvArgs;
     # in pkgs.buildFHSUserEnv (base
@@ -22,7 +24,5 @@
     #  })
     # )
   ];
-
-    # programs.steam.enable = true;
 
 }

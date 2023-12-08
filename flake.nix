@@ -24,10 +24,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
-    # libre.url = "https://github.com/LibreOffice/core.git";
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
     # FIXME:flatpak.url = "github:yawnt/declarative-nix-flatpak/main";
     # xdm.url = "https://github.com/subhra74/xdm.git";
+    # libre.url = "https://github.com/LibreOffice/core.git";
   };
 
   outputs = { 

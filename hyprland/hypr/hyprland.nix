@@ -2,13 +2,11 @@
 {
 
   home.packages = with pkgs; [
-    chezmoi
     neofetch
     onefetch
     zathura
     rofi
     rofi-emoji
-    wofi
     bat
     jq
     xdg-desktop-portal-hyprland
@@ -49,12 +47,16 @@
     imv
   ];
 
-  services.udiskie.enable = true;
+  services = {
+    udiskie.enable = true;
+    playerctld.enable = true;
+  };
 
-  programs.rofi.enable = true;
-  programs.wofi.enable = true;
+  programs = {
+    rofi.enable = true;
+    wofi.enable = true;
+  };
 
-  services.playerctld.enable = true;
 
   home.file = {
     ".local/bin/hypr" = {

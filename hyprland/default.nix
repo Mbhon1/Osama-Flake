@@ -1,4 +1,3 @@
-{ pkgs, config, ... }:
 {
   imports = [
     ./hypr

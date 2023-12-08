@@ -1,4 +1,4 @@
-{ pkgs, lib, spicetify-nix, ...}: {
+{ pkgs, spicetify-nix, ...}: {
   imports = [ spicetify-nix.homeManagerModule ];
 
   programs.spicetify = let
@@ -14,9 +14,9 @@
     colorScheme = "flamingo";
 
     enabledCustomApps = with spicePkgs.apps; [
-      lyrics-plus
       marketplace
       new-releases
+      lyrics-plus
     ];
 
     enabledExtensions = with spicePkgs.extensions; [
