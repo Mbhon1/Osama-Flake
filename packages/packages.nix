@@ -3,8 +3,9 @@
   home.packages = with pkgs; [
     unzip
     zip
-    nodejs
-    nodePackages.nodemon
+    nodePackages_latest.nodejs
+    nodePackages_latest.pnpm
+    nodePackages_latest.nodemon
     rustc
     cargo
     go
@@ -31,5 +32,6 @@
     coreutils
     gnome.gnome-keyring
     nix-prefetch
+    cron
   ];
 }

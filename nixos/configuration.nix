@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -83,7 +83,10 @@
   nixpkgs = {
     config = {
      allowUnfree = lib.mkForce true;
-     permittedInsecurePackages = [ "electron-19.1.9" ];
+     permittedInsecurePackages = [ 
+     	"electron-19.1.9"
+	"mailspring-1.11.0"
+     ];
     };
     overlays = [
       (self: super: {
@@ -112,6 +115,7 @@
       virt-manager
       virt-viewer
       etcher
+      mailspring
     ];
     shells = with pkgs; [ bash zsh ];
     variables.EDITOR = "nvim";
@@ -119,8 +123,8 @@
       "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
         context.properties = {
           default.clock.rate = 44100
-	        default.clock.quantum = 512
-	        default.clock.max-quuantum = 512
+	  default.clock.quantum = 512
+	  default.clock.max-quuantum = 512
         };
       '';
     };
@@ -143,8 +147,8 @@
    };
    hyprland = {
      enable = true;
-     xwayland.enable = true;
      # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+     xwayland.enable = true;
      # enableNvidiaPatches = true;
    };
   };

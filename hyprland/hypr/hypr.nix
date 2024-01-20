@@ -1,8 +1,8 @@
 {pkgs, config, lib, inputs, ...}: 
 {
   wayland.windowManager.hyprland.extraConfig = ''
-    #monitor = DP-1, 1440x900@59, 0x0, 1
-    monitor = DP-1, 1024x768@59, 0x0, 1
+    monitor = DP-1, 1440x900@59, 0x0, 1
+    # monitor = DP-1, 1024x768@59, 0x0, 1
 
     # Start up apps on boot
     exec-once = /usr/libexec/polkit-gnome-authentication-agent-1
@@ -146,8 +146,8 @@
     bindl  = , XF86AudioNext,           exec, ags -b hypr -r "mpris.players.pop()?.next()"
     bindl  = , XF86AudioMicMute,        exec, ags -b hypr -r "audio.microphone.isMuted = !audio.microphone.isMuted" 
 
-    bind = SUPER SHIFT, P, exec, ags -b hypr run-js "ags.Service.Recorder.screenshot()"
-    # bind = , Print, exec, sleep 1 && grimblast --notify save area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') &
+    # bind = SUPER SHIFT, P, exec, ags -b hypr run-js "ags.Service.Recorder.screenshot()"
+    bind = SUPER SHIFT, P, exec, sleep 1 && grimblast --notify save area ~/Pictures/Screenshots/$(date +'%s_screenshot.png') &
 
     # Launchers
     bind = SUPER, Return, exec, kitty

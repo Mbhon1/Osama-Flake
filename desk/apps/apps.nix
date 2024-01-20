@@ -9,7 +9,8 @@
     betterdiscordctl
     obsidian
     gparted
-  #  mailspring
+    anydesk
+    libre
   ];
 
   nixpkgs.overlays = [

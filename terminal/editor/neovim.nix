@@ -5,7 +5,6 @@
     nodePackages.vscode-langservers-extracted
     nodePackages.vls
     nodePackages.vercel
-    nodePackages.pnpm 
     lua-language-server
     nodePackages_latest.typescript
     nodePackages_latest.eslint

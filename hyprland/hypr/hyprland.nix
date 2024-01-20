@@ -45,6 +45,7 @@
     qt6.qtwayland
     pulsemixer
     imv
+    grimblast
   ];
 
   services = {
